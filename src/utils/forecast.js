@@ -13,7 +13,7 @@ const forecast = (latitude, longitude, callback) =>{
         }
         else{
             const {temperature, precipProbability} = currently
-            callback(undefined,response.body.daily.data[0].summary+" It is currently "+ temperature +" degrees out. There is a "+ precipProbability+"% chance of rain")
+            callback(undefined,response.body.daily.data[0].summary+" It is currently "+ temperature +" degrees out. The high temperature today is "+ response.body.daily.data[0].temperatureHigh +" with a low temperature of "+ response.body.daily.data[0].temperatureLow+". There is a "+ precipProbability+"% chance of rain")
         }
     })
 }
